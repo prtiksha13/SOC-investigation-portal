@@ -1,0 +1,26 @@
+# Java build files
+target/
+*.class
+
+# IDE settings
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+
+# Local JDK
+oracleJdk-26/
+
+# Logs and captured data
+*.log
+cookies.txt
+*_headers.txt
+login.html
+loginpost.html
+java-procs.txt
+
+# Environment and secrets
+.env
+.env.*
+!.env.example

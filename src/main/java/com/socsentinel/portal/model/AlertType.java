@@ -1,0 +1,6 @@
+package com.socsentinel.portal.model;
+
+public enum AlertType {
+    AUTHENTICATION, AUTHORIZATION, APPLICATION, NETWORK, SYSTEM, SECURITY,
+    ENDPOINT, DATA_EXFILTRATION, POLICY_VIOLATION, OTHER
+}

