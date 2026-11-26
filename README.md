@@ -1,47 +1,95 @@
-# SOC Sentinel — Full Stack Project
 
-This is a Spring Boot + MariaDB implementation of the AI-Powered SOC Alert Prioritization and Investigation Portal from the project documentation.
+# 🛡️ SOC Investigation Portal
 
-## What is stored in MariaDB
+### AI-Driven SOC Alert Prioritization and Investigation Portal
 
-- Every alert: reference code, title, asset, description, severity, status, AI priority score, and timestamps
-- Every investigation note: alert link, note text, analyst name, and timestamp
-- Six sample alerts are inserted the first time the app starts; they are then real database records and can be changed from the website.
+A web-based Security Operations Center (SOC) investigation platform designed to help security analysts monitor, prioritize, investigate, and manage security alerts efficiently.
 
-## VS Code extensions to install
+## 📌 About the Project
 
-1. **Extension Pack for Java** (Microsoft) — Java, Maven, debugger, test support
-2. **Spring Boot Extension Pack** (VMware) — Spring Boot Dashboard and project support
-3. **Database Client JDBC** (cweijan) or **SQLTools** — optional MariaDB database viewer
+The SOC Investigation Portal aims to simplify security alert management by providing a centralized platform for monitoring and investigating suspicious activities.
 
-## How to run
+It focuses on alert prioritization, analyst-based investigation workflows, role-based access control, and security event management.
 
-1. Install Java 21, Maven, and XAMPP/MariaDB.
-2. Start **MySQL** from the XAMPP Control Panel.
-3. In `src/main/resources/application.properties`, set `spring.datasource.username` and `spring.datasource.password` to your MariaDB credentials. The included default is XAMPP's usual `root` user with a blank password.
-4. Open this folder in VS Code.
-5. Open the terminal in the project root and run:
+## 🎯 Objectives
 
-   ```powershell
-   ./run.ps1
+- Centralized security alert management.
+- Prioritize alerts based on risk and severity.
+- Support structured security investigations.
+- Provide role-based access for SOC analysts.
+- Maintain investigation history and audit logs.
+- Improve the efficiency of SOC operations.
+
+## 🚀 Key Features
+
+- Secure Login and Registration
+- Role-Based Access Control
+- SOC Alert Dashboard
+- Alert Prioritization
+- Security Alert Investigation
+- Analyst Escalation Workflow
+- Investigation History
+- Audit Logging
+- Admin Management
+
+## 👥 User Roles
+
+| Role | Access |
+|------|--------|
+| Admin | Full system access |
+| Analyst Level 2 | Level 1 and Level 2 investigations |
+| Analyst Level 1 | Level 1 investigation access |
+
+## 🛠️ Technology Stack
+
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Java / Spring Boot
+- Database: MySQL
+- Development Tools: VS Code, XAMPP, Git, GitHub
+
+## ⚙️ Project Modules
+
+1. Authentication and User Management
+2. Security Alert Management
+3. Alert Risk Prioritization
+4. Investigation Management
+5. Analyst Escalation
+6. Audit and Activity Logs
+7. Admin Dashboard
+
+## 💻 Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/prtiksha13/SOC-investigation-portal.git
    ```
 
-   Or, if Maven is already on your PATH:
+2. Open the project in your IDE.
 
-   ```powershell
-   mvn spring-boot:run
-   ```
+3. Configure the database connection.
 
-6. Visit [http://localhost:8081](http://localhost:8081) unless you override the `PORT` environment variable.
+4. Create the required MySQL database.
 
-The front end is served by Spring Boot, so do **not** use the Live Server extension for this version.
+5. Run the application using the configured development environment.
 
-## API routes
+## 🔮 Future Enhancements
 
-- `GET`, `POST /api/alerts`
-- `PATCH /api/alerts/{id}/status`
-- `GET`, `POST /api/notes`
-- `GET /api/metrics`
-- `POST /api/alerts/{id}/ai-analysis`
+- Machine Learning-based alert prioritization.
+- Real-time security log ingestion.
+- Advanced threat detection.
+- SIEM integration.
+- Automated incident analysis.
+
+## 👩‍💻 Developer
+
+Developed as a Cyber Security project with a focus on SOC operations, security alert management, and investigation workflows.
+
+**GitHub:** https://github.com/prtiksha13
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository.
+
 
 The AI route is a safe local demonstration. To use Gemini, add a server-side Gemini client and keep its API key in an environment variable — never in `app.js`.
